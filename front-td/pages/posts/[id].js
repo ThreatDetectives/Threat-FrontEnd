@@ -1,11 +1,11 @@
 import Layout from '../../components/layout';
-import Comic from '../../components/comic';
+import Posts from '../../components/main'
 import { fetch } from '../../services/fetcher';
 
-export default function displayComic({ comic }) {
+export default function displayPost({ post }) {
 	return (
 		<Layout>
-			<Comic comic={comic} />
+			<h1>99% threat</h1>
 		</Layout>
 	);
 }

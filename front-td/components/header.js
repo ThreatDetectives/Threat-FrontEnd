@@ -7,10 +7,13 @@ export default function Header() {
 				<Link href="/">
 					<a>Home</a>
 				</Link>
-				<Link href="/about">
-					<a>About</a>
+				<Link href="/hate">
+					<a> | Hate Speech Percentage | </a>
 				</Link>
-			</nav>
+				<Link href="/profanity">
+					<a>Profanity Percentage</a>
+				</Link>
+				</nav>
 			<h1>Hate Detector</h1>
 		</>
 	);

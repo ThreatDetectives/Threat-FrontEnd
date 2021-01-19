@@ -1,35 +1,35 @@
 import Link from 'next/link';
 
-export default function Comic({ comic }) {
+export default function Post({ post }) {
 	return (
 		<>
-			<h2>{comic.title}</h2>
-			<img src={comic.img} alt={comic.alt} />
+			<h2>{post.title}</h2>
+			<img src={post.img} alt={post.alt} />
 		</>
 	);
 }
 
-export function ComicList({ mostRecentNum }) {
-	let nums = [];
+export function PostList({ mostRecentPost }) {
+let posts = [];
 	// iterate downwards, for 10 units
-	for (let i = mostRecentNum; i > mostRecentNum - 10; i--) {
-		nums = [...nums, i];
+	for (let i = mostRecentPost; i > mostRecentPost - 10; i--) {
+		posts = [...posts, i];
 	}
 
 	return (
 		<ul>
-			{nums.map((num) => (
-				<ComicLink num={num} key={num} />
+			{posts.map((post) => (
+				<ComicLink post={post} key={post} />
 			))}
 		</ul>
 	);
 }
 
-function ComicLink({ num }) {
+function PostLink({ post }) {
 	return (
 		<li>
-			<Link href="/comics/[id].js" as={`/comics/${num}`}>
-				<a>{num}</a>
+			<Link href="/posts/[id].js" as={`/pages/${post}`}>
+				<a>{post}</a>
 			</Link>
 		</li>
 	);

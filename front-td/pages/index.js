@@ -1,26 +1,32 @@
 import Layout from '../components/layout';
-import Comic, { ComicList } from '../components/comic';
 import { fetch } from '../services/fetcher';
 
-export default function Home({ comic }) {
+// const superagent = require('superagent');
+
+///make a function that makes a POST request to the back end. ?which route will handle this(url)?
+
+export default function Home() {
 	return (
 		<Layout>
-			<Comic comic={comic} />
-			<h3>Other Findings</h3>
-			<ComicList mostRecentNum={comic.num} />
+			<main>
+				<h1>Threat Detector</h1>
+				<p id="aboutproduct">Threat dector is a learning AI that can detect threating speech. This tool scrapes the inputed URL and returns a percentage of hate speech and profanity used in their posts. The AI was trained with data sets of hate speech
+				</p>
+				<div id="hpcontent">
+				<input type="text" id="urlhere" name="inputbox"></input>
+				<input type="submit" value="Threat"></input>
+				</div>
+			<footer>footer goes here</footer>
+			</main>
 		</Layout>
 	);
 }
-function Footer(props) {
-	return;
-	<footer comicNum={props.comic.num}>
-		<h2>Previous 10</h2>
-	</footer>;
-}
-export async function getStaticProps() {
-	const comic = await fetch();
 
-	return {
-		props: { comic },
-	};
-}
+
+// export async function getStaticProps() {
+// 	const comic = await fetch();
+
+// 	return {
+// 		props: { comic },
+// 	};
+// }

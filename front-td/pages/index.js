@@ -9,13 +9,12 @@ export default function Home() {
 	return (
 		<Layout>
 			<main>
-				<h1>Threat Detectives</h1>
-				<p id="aboutproduct">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Suspendisse interdum consectetur libero id. Ultrices vitae auctor eu augue ut lectus arcu. Sem viverra aliquet eget sit amet. In vitae turpis massa sed elementum. Aliquet nibh praesent tristique magna sit amet purus gravida quis. Scelerisque eleifend donec pretium vulputate. Et ultrices neque ornare aenean. Purus viverra accumsan in nisl nisi scelerisque eu ultrices. Est ullamcorper eget nulla facilisi etiam dignissim. Dignissim sodales ut eu sem integer vitae justo. Nunc pulvinar sapien et ligula ullamcorper. Nunc id cursus metus aliquam eleifend mi in. Metus dictum at tempor commodo. Augue interdum velit euismod in pellentesque massa. Fames ac turpis egestas integer eget aliquet nibh. Amet nulla facilisi morbi tempus iaculis urna id. In fermentum et sollicitudin ac orci phasellus egestas. Maecenas pharetra convallis posuere morbi.
+				<h1>Threat Detector</h1>
+				<p id="aboutproduct">Threat dector is a learning AI that can detect threating speech. This tool scrapes the inputed URL and returns a percentage of hate speech and profanity used in their posts. The AI was trained with data sets of hate speech
 				</p>
 				<div id="hpcontent">
 				<input type="text" id="urlhere" name="inputbox"></input>
-				<input type="submit" value="Hate Speech"></input>
-				<input type="submit" value="Profanity"></input>
+				<input type="submit" value="Threat"></input>
 				</div>
 			<footer>footer goes here</footer>
 			</main>

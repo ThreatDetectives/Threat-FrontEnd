@@ -11,10 +11,13 @@ export default function Header() {
 					<a> | Hate Speech Percentage | </a>
 				</Link>
 				<Link href="/profanity">
-					<a>Profanity Percentage</a>
+					<a>Profanity Percentage | </a>
 				</Link>
+				<Link href="/about">
+					<a>About Creators</a>
+				</Link>
+				
 				</nav>
-			<h1>Hate Detector</h1>
 		</>
 	);
 }

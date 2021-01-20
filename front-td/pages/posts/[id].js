@@ -1,8 +1,8 @@
 import Layout from '../../components/layout';
-import Posts from '../../components/main'
+import Post from '../../components/main'
 import { fetch } from '../../services/fetcher';
 
-export default function displayPost({ post }) {
+export default function displayPost() {
 	return (
 		<Layout>
 			<h1>99% threat</h1>
@@ -10,14 +10,14 @@ export default function displayPost({ post }) {
 	);
 }
 
-export async function getServerSideProps(context) {
-	const id = context.query.id;
+// export async function getServerSideProps(context) {
+// 	const id = context.query.id;
 
-	const comic = await fetch(id);
+// 	const comic = await fetch(id);
 
-	return {
-		props: {
-			comic,
-		},
-	};
-}
+// 	return {
+// 		props: {
+// 			comic,
+// 		},
+// 	};
+// }

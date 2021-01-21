@@ -1,6 +1,5 @@
 import Layout from '../../components/layout';
 import Post from '../../components/main'
-import { fetch } from '../../services/fetcher';
 
 export default function displayPost() {
 	return (

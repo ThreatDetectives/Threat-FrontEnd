@@ -1,5 +1,4 @@
 import Layout from '../components/layout';
-// import { fetch } from '../services/fetcher';
 import { Component } from 'react';
 
 // const superagent = require('superagent');
@@ -11,12 +10,13 @@ export default function Home() {
 		<Layout>
 			<main>
 				<h1>Threat Detector</h1>
-				<p id="aboutproduct">We Bring Light To Threatening Speech</p>
+				<h3>We Bring Light To Threatening Speech</h3>
+				<p>Enter Twitter Handle Below</p>
 				<div id="hpcontent">
-				<input type="text" id="urlhere" name="inputbox"></input>
-				<input type="submit" value="Threat"></input>
+					<input type="text" id="urlhere" name="inputbox"></input>
+					<input type="submit" value="Threat"></input>
 				</div>
-			<footer>footer goes here</footer>
+				<footer>footer goes here</footer>
 			</main>
 		</Layout>
 	);

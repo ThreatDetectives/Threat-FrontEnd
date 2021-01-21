@@ -6,6 +6,12 @@ function About() {
 		<Layout>
 			<main>
 				<div id="about">
+					<h1>About the Detector</h1>
+					<p>his app uses a trained model to detect threatening speech. It has been trained with over 25 thousand labeled tweets that are categorized into hate speech, offensive language, or neither. In its current state the THreat Detector can take in any twitter user handle and will search through the most recent 3,254 tweets the user has posted, looking for hateful or offensive language. It will then return a reading on the percentage of hateful/offensive language used by the user. It currently only has access to the twitter API, but expansion into web crawling and more API's is on the list. </p>
+				</div>
+				<div id="about">
+
+					<h1>Meet The Team</h1>
 
 					<h2>Hexx King</h2>
 

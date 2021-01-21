@@ -10,8 +10,7 @@ export default function Home() {
 		<Layout>
 			<main>
 				<h1>Threat Detector</h1>
-				<p id="aboutproduct">Threat dector is a learning AI that can detect threating speech. This tool scrapes the inputed URL and returns a percentage of hate speech and profanity used in their posts. The AI was trained with data sets of hate speech
-				</p>
+				<p id="aboutproduct">We Bring Light To Threatening Speech</p>
 				<div id="hpcontent">
 				<input type="text" id="urlhere" name="inputbox"></input>
 				<input type="submit" value="Threat"></input>

@@ -1,5 +1,5 @@
 import Layout from '../components/layout';
-import { fetch } from '../services/fetcher';
+// import { fetch } from '../services/fetcher';
 import { Component } from 'react';
 
 // const superagent = require('superagent');

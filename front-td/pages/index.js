@@ -40,7 +40,7 @@ class Index extends Component {
 		// alert(JSON.stringify(this.state.twitterHandle));
 		//making a post request with the fetch API
 		// route to heroku hosted back end goes here
-		fetch('http://127.0.0.1:8000/', {
+		fetch('https://threat-detectives.herokuapp.com/', {
 			method: 'POST',
 			headers: {
 				Accept: 'application/json',

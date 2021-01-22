@@ -12,10 +12,7 @@ export default function Home() {
 				<h1>Threat Detector</h1>
 				<h3>We Bring Light To Threatening Speech</h3>
 				<p>Enter Twitter Handle Below</p>
-				<div id="hpcontent">
-					<input type="text" id="urlhere" name="inputbox"></input>
-					<input type="submit" value="Threat"></input>
-				</div>
+				<Index />
 				<footer>footer goes here</footer>
 			</main>
 		</Layout>
@@ -73,6 +70,7 @@ class Index extends Component {
 		);
 	}
 }
+
 // export async function getStaticProps() {
 // 	const comic = await fetch();
 

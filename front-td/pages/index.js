@@ -57,7 +57,7 @@ class Index extends Component {
 				} catch (error) {
 					console.log(error.message);
 				}
-				response.json();
+				return response.json();
 			})
 			.then((data) => console.log(data))
 			.catch((error) => console.log(error));

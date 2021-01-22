@@ -37,7 +37,8 @@ class Index extends Component {
 	};
 	handleSubmit = (evt) => {
 		evt.preventDefault();
-		// alert(JSON.stringify(this.state.twitterHandle));
+		alert(JSON.stringify(this.state.twitterHandle));
+
 		//making a post request with the fetch API
 		// route to heroku hosted back end goes here
 		fetch('https://threat-detectives.herokuapp.com/', {

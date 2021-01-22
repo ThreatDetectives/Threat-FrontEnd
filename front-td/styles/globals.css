@@ -6,11 +6,21 @@ body {
 		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-h1 {
-	color: #958E89;
+h1 {	
 	margin-bottom: 5%;
 	text-align: center;
 }
+
+h3 {
+	text-align:center;
+	margin-bottom:10%;
+	margin-top:10%;
+}
+
+p {
+	text-align:center;
+}
+
 #aboutproduct {
 	color:black;
 	text-align: center;
@@ -24,7 +34,7 @@ h1 {
 
 #hpcontent {
 	text-align: center;
-	margin-top: 5%;
+	margin-top: 2%;
 	margin-bottom: 27%;
 }
 
@@ -48,4 +58,8 @@ a {
 
 * {
 	box-sizing: border-box;
+}
+
+footer {
+	margin-top:65%;
 }

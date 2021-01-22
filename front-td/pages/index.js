@@ -42,6 +42,7 @@ class Index extends Component {
 		// route to heroku hosted back end goes here
 		fetch('https://threat-detectives.herokuapp.com/', {
 			method: 'POST',
+			mode: 'no-cors',
 			headers: {
 				Accept: 'application/json',
 				'Content-Type': 'application/json',

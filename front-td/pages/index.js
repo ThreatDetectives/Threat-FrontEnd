@@ -27,6 +27,8 @@ class Index extends Component {
 		this.state = {
 			twitterHandle: '',
 		};
+		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleChange = this.handleChange.bind(this);
 	}
 	handleChange = (evt) => {
 		// This triggers everytime the input is changed

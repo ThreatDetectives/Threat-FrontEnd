@@ -7,7 +7,7 @@ function About() {
 			<main>
 				<div id="about">
 					<h1>About the Detector</h1>
-					<p>his app uses a trained model to detect threatening speech. It has been trained with over 25 thousand labeled tweets that are categorized into hate speech, offensive language, or neither. In its current state the THreat Detector can take in any twitter user handle and will search through the most recent 3,254 tweets the user has posted, looking for hateful or offensive language. It will then return a reading on the percentage of hateful/offensive language used by the user. It currently only has access to the twitter API, but expansion into web crawling and more API's is on the list. </p>
+					<p>This app uses a trained model to detect threatening speech. It has been trained with over 25 thousand labeled tweets that are categorized into hate speech, offensive language, or neither. In its current state the THreat Detector can take in any twitter user handle and will search through the most recent 3,254 tweets the user has posted, looking for hateful or offensive language. It will then return a reading on the percentage of hateful/offensive language used by the user. It currently only has access to the twitter API, but expansion into web crawling and more API's is on the list. </p>
 				</div>
 				<div id="about">
 
@@ -16,7 +16,7 @@ function About() {
 					<h2>Hexx King</h2>
 
 					<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In pellentesque massa placerat duis ultricies lacus. Suspendisse sed nisi lacus sed viverra. Euismod in pellentesque massa placerat duis ultricies. Fermentum posuere urna nec tincidunt praesent semper feugiat nibh. Eget nunc lobortis mattis aliquam faucibus purus in. Egestas fringilla phasellus faucibus scelerisque eleifend. Metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel. Risus in hendrerit gravida rutrum quisque. Ornare arcu dui vivamus arcu. Luctus accumsan tortor posuere ac ut consequat semper viverra nam. Imperdiet proin fermentum leo vel orci. Sed faucibus turpis in eu mi bibendum neque egestas. Nunc non blandit massa enim nec dui. Nibh nisl condimentum id venenatis a condimentum vitae. Venenatis urna cursus eget nunc scelerisque. Donec massa sapien faucibus et molestie ac feugiat sed lectus. <a href="https://github.com/HexxKing">GitHub</a> | <a href="https://www.linkedin.com/in/hexx-king/">LinkedIn</a>
+					My name is Hexx King I was born and raised in Texas but I have been living in Seattle, WA since 2013. I am a very active member in the LGBTQIA community and I enjoy roller skating and playing video games in my free time. I was originally  drawn to coding through an interest in cyber security and ethical hacking and in April 2020, I joined Code Fellows and wrote my very first line of code! I plan to continue my education in software development while also pursuing internships that will lead to a technical program management role. <a href="https://github.com/HexxKing">GitHub</a> | <a href="https://www.linkedin.com/in/hexx-king/">LinkedIn</a>
 					</p>
 
 					<h2>Taylor Johnson</h2>

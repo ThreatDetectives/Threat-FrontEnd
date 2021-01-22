@@ -51,7 +51,14 @@ class Index extends Component {
 				twitterHandle: this.state.twitterHandle,
 			}),
 		})
-			.then((response) => response.json())
+			.then((response) => {
+				try {
+					console.log(response);
+				} catch (error) {
+					console.log(error.message);
+				}
+				response.json();
+			})
 			.then((data) => console.log(data))
 			.catch((error) => console.log(error));
 	};

@@ -6,13 +6,20 @@ export class Main extends Component {
 
 	state = {
 		threatLevel: null,
-		threatColor: 'threat-view blank',
+		threatColor: '',
 		searchQuery: '',
+		showModal: false,
 	}
 	
 	displaySearchQuery = (query) => {
 		this.setState({
 			searchQuery: query
+		});
+	}
+
+	displayModal = () => {
+		this.setState({
+			showModal: true
 		});
 	}
 
@@ -35,7 +42,7 @@ export class Main extends Component {
 			color = 'threat-red';
 		
 		this.setState({
-			threatColor: 'threat-view' + color
+			threatColor: color
 		});
 	}
 
@@ -49,15 +56,17 @@ export class Main extends Component {
 					displayThreat = { this.displayThreatLevel }
 					displayColor = { this.displayThreatColor }
 					displayQuery = { this.displaySearchQuery }
+					displayModal = { this.displayModal }
 				/>
 
 				<ResultModal
+					showMe = { this.state.showModal }
 					threat = { this.state.threatLevel }
 					color = { this.state.threatColor }
 					query = { this.state.searchQuery }
 				/>
 
-				<section>
+				<section className="infoButtons">
 					<button>Meet the Devs!</button>
 					<button>Resources!</button>
 				</section>

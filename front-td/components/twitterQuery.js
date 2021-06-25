@@ -25,6 +25,7 @@ export class TwitterQuery extends Component {
         this.props.displayThreat(result);
         this.props.displayColor(result);
         this.props.displayQuery(this.state.query);
+        this.props.displayModal();
         this.setState({
             query: ''
         });
@@ -32,10 +33,11 @@ export class TwitterQuery extends Component {
 
     render() {
         return (
-            <div>
-                    <label>Enter Twitter Handle
-                        <input type="text" value={this.state.query} onChange={this.handleInput.bind(this)} placeholder="Twitter Handle" required/>
-                    </label>
+            <div className="twitterQuery">
+                <div>
+                    <label>Enter Twitter Handle</label>
+                    <input type="text" value={this.state.query} onChange={this.handleInput.bind(this)} placeholder="Twitter Handle" required/>
+                </div>
                     <button onClick={this.handleSubmission.bind(this)}>Submit</button>
             </div>
         )

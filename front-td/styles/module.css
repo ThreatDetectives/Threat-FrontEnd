@@ -1,0 +1,110 @@
+@media (min-width: 768px){
+
+    body{
+        
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .page-container{
+
+    }
+    
+    header{
+
+    }
+    
+    main{
+
+    }
+    
+        main > article{
+            /* border: 3px black solid; */
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 1em;
+            
+
+        }
+        
+        main > .twitterQuery{
+            border: 3px black solid;
+            background-color: black;
+            color: white
+        }
+            .twitterQuery > div{
+                padding: 5px;
+            }
+
+            .twitterQuery > button{
+                border-radius: 5px;
+                border: 3px black solid;
+            }
+    
+        main > .resultModal{
+            border: 10px black solid;
+            background-color: black;
+        }
+
+            .hide-me{
+                visibility: hidden;
+            }
+
+            .threat-green{
+                border: 10px solid green;
+            }
+            .threat-yellow{
+                border: 10px solid yellow;
+            }
+            .threat-orange{
+                border: 10px solid orange;
+            }
+            .threat-red{
+                border: 10px solid red;
+            }
+
+            .resultModal > h2{
+                text-align: center;
+                font-size: 2em;
+                color: white;
+                background-color: black;
+            }
+
+            .resultModal > div > p:first-child{
+                text-align: center;
+                font-size: 3em;
+                color: white;
+                background-color: black;
+            }
+
+            .resultModal > div > p:last-child{
+                text-align: center;
+                font-size: 1.4em;
+                line-height: 2em;
+                color: white;
+                background-color: black;
+            }
+
+    
+        main > .infoButtons{
+            border: 3px black solid;
+            background-color: black
+        }
+
+            .infoButtons > button{
+                height: 40px;
+                width: 200px;
+                border-radius: 5px;
+                margin: auto 30px;
+                
+                
+            }
+    
+    
+    footer{
+
+    }
+}

@@ -4,7 +4,8 @@
     .page-container{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 150px 1fr;
+        grid-template-rows: min-content min-content;
+        
     }
     
     header{
@@ -20,6 +21,7 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 2fr 3fr 3fr 1fr;
+        grid-row-gap: 10px;
     }
     
         main > article{
@@ -32,26 +34,67 @@
             grid-row: 2/3;
             width: 95%;
             margin: 0px auto;
+            display: grid;
+            grid-template-columns: 65% 35%;
+            grid-template-rows: 1fr;
         }
+
+            .twitterQuery > div{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 50% 50%;
+            }
+
+            .twitterQuery > div > label{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+            .twitterQuery > div > input{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+
+            .twitterQuery > button{
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+
+
     
         main > .resultModal{
             grid-column: 1/2;
             grid-row: 3/4;
             width: 95%;
             margin: 0px auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 40% 60%;
         }
+
+            .resultModal > div{
+                display: grid;
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 1fr;
+            }
     
         main > .infoButtons{
             grid-column: 1/2;
             grid-row: 4/5;
             width: 95%;
             margin: 0px auto;
+            text-align: center;
         }
+
     
     
     footer{
+        width: 100%;
         position: fixed;
         bottom: 0;
+        z-index: -1;
     }
 }
 

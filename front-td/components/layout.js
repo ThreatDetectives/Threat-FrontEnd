@@ -1,17 +1,21 @@
 import Head from 'next/head';
 import Header from './header';
+import Footer from './footer';
+import Main from './main';
 
 
-export default function Layout({ children }) {
+export default function Layout() {
 	return (
 		<div>
 			<Head>
-				<title>Threat Detector</title>
+				<title>Threat Detective</title>
 			</Head>
 
 			<Header />
 
-			<main>{children}</main>
+			<Main />
+
+			<Footer />
 		</div>
 	);
 }

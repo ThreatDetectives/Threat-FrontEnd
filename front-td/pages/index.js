@@ -8,13 +8,16 @@ import { Component } from 'react';
 export default function Home() {
 	return (
 		<Layout>
-			<main>
-				<h1>Threat Detector</h1>
+				<section><img src="https://via.placeholder.com/150"></img></section>
 				<h3>We Bring Light To Threatening Speech</h3>
 				<p>Enter Twitter Handle Below</p>
 				<Index />
-				<footer>footer goes here</footer>
-			</main>
+				<div>10%</div>
+				<footer>
+					<p>™/Created by..</p>
+					<p>GitHub</p>
+				</footer>
+			
 		</Layout>
 	);
 }
@@ -70,6 +73,7 @@ class Index extends Component {
 					name="twitterHandle"
 					type="text"
 					id="name"
+					placeholder="Twitter Handle"
 					value={this.state.twitterHandle}
 					onChange={this.handleChange}
 				></input>

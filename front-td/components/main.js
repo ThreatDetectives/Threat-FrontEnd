@@ -1,36 +1,71 @@
-import Link from 'next/link';
+import React, { Component } from 'react';
+import ResultModal from './resultModal';
+import TwitterQuery from './twitterQuery';
 
-export default function Post({ post }) {
-	return (
-		<>
-			<h2>{post.title}</h2>
-			<img src={post.img} alt={post.alt} />
-		</>
-	);
-}
+export class Main extends Component {
 
-export function PostList({ mostRecentPost }) {
-let posts = [];
-	// iterate downwards, for 10 units
-	for (let i = mostRecentPost; i > mostRecentPost - 10; i--) {
-		posts = [...posts, i];
+	state = {
+		threatLevel: null,
+		threatColor: 'threat-view blank',
+		searchQuery: '',
+	}
+	
+	displaySearchQuery = (query) => {
+		this.setState({
+			searchQuery: query
+		});
 	}
 
-	return (
-		<ul>
-			{posts.map((post) => (
-				<ComicLink post={post} key={post} />
-			))}
-		</ul>
-	);
+
+	displayThreatLevel = (percentage) => {
+		this.setState({ 
+			threatLevel: percentage
+		});
+	}
+
+	displayThreatColor = (threat) => {
+		let color;
+		if (threat >= 0 && threat < 25)
+			color = 'threat-green';
+		else if (threat > 24 && threat < 50)
+			color = 'threat-yellow';
+		else if (threat > 49 && threat < 75)
+			color = 'threat-orange';
+		else if (threat > 74)
+			color = 'threat-red';
+		
+		this.setState({
+			threatColor: 'threat-view' + color
+		});
+	}
+
+
+	render() {
+		return (
+			<main>
+				<article> About the app and stuff...</article>
+
+				<TwitterQuery
+					displayThreat = { this.displayThreatLevel }
+					displayColor = { this.displayThreatColor }
+					displayQuery = { this.displaySearchQuery }
+				/>
+
+				<ResultModal
+					threat = { this.state.threatLevel }
+					color = { this.state.threatColor }
+					query = { this.state.searchQuery }
+				/>
+
+				<section>
+					<button>Meet the Devs!</button>
+					<button>Resources!</button>
+				</section>
+
+			</main>
+		)
+	}
+
 }
 
-function PostLink({ post }) {
-	return (
-		<li>
-			<Link href="/posts/[id].js" as={`/pages/${post}`}>
-				<a>{post}</a>
-			</Link>
-		</li>
-	);
-}
+export default Main;

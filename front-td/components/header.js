@@ -1,28 +1,11 @@
-import Link from 'next/link';
+import React from 'react';
 
 export default function Header() {
 	return (
-		<>
-
 			<header>
-				<h1>Threat Detector</h1>
-				<nav>
-					<ul>
-						<li>
-							<Link href="/">
-								<a>Home</a>
-							</Link>
-						</li>
-						<li>
-							<Link href="/about">
-								<a>About Creators</a>
-							</Link>							
-						</li>
-					</ul>
-
-				</nav>
+            	<img src="https://via.placeholder.com/900x150"></img>
 			</header>
-
-		</>
 	);
 }
+
+

@@ -57,7 +57,7 @@ export class Main extends Component {
 					query = { this.state.searchQuery }
 				/>
 
-				<section>
+				<section className="infoButtons">
 					<button>Meet the Devs!</button>
 					<button>Resources!</button>
 				</section>

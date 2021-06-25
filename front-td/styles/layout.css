@@ -1,0 +1,115 @@
+@media (min-width: 768px){
+
+    
+    .page-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr;
+    }
+    
+    header{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    main{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 80%;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 3fr 3fr 1fr;
+    }
+    
+        main > article{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        
+        main > .twitterQuery{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            width: 95%;
+            margin: 0px auto;
+        }
+    
+        main > .resultModal{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            width: 95%;
+            margin: 0px auto;
+        }
+    
+        main > .infoButtons{
+            grid-column: 1/2;
+            grid-row: 4/5;
+            width: 95%;
+            margin: 0px auto;
+        }
+    
+    
+    footer{
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+
+@media (max-width: 767px){
+
+    
+    .page-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr;
+    }
+    
+    header{
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    main{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 80%;
+        margin: 20px auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 3fr 3fr 1fr;
+    }
+    
+        main > article{
+            grid-column: 1/2;
+            grid-row: 1/2;
+        }
+        
+        main > .twitterQuery{
+            grid-column: 1/2;
+            grid-row: 2/3;
+            width: 95%;
+            margin: 0px auto;
+        }
+    
+        main > .resultModal{
+            grid-column: 1/2;
+            grid-row: 3/4;
+            width: 95%;
+            margin: 0px auto;
+        }
+    
+        main > .infoButtons{
+            grid-column: 1/2;
+            grid-row: 4/5;
+            width: 95%;
+            margin: 0px auto;
+        }
+    
+    
+    footer{
+        position: fixed;
+        bottom: 0;
+    }
+}
+

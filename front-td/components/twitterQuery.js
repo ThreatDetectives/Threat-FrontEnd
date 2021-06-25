@@ -32,7 +32,7 @@ export class TwitterQuery extends Component {
 
     render() {
         return (
-            <div>
+            <div className="twitterQuery">
                     <label>Enter Twitter Handle
                         <input type="text" value={this.state.query} onChange={this.handleInput.bind(this)} placeholder="Twitter Handle" required/>
                     </label>

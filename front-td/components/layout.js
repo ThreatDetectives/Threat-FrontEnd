@@ -6,7 +6,7 @@ import Main from './main';
 
 export default function Layout() {
 	return (
-		<div>
+		<div className="page-container">
 			<Head>
 				<title>Threat Detective</title>
 			</Head>

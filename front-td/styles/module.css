@@ -25,28 +25,39 @@
             background-color: white;
             border-radius: 10px;
             padding: 10px;
-            font-size: 1em;
+            box-shadow: -1px 4px 3px 2px rgb(50, 61, 65);
             
 
         }
         
         main > .twitterQuery{
-            border: 3px black solid;
-            background-color: black;
-            color: white
+            /* border: 3px black solid; */
+            font-size: 30px;
+            /* background-color: black; */
+            /* color: white */
         }
             .twitterQuery > div{
+                padding: 10px;
+            }
+
+            .twitterQuery > div > input{
+                background-color: rgb(202, 227, 237);
+                border-radius: 10px;
+                font-size: 20px;
                 padding: 5px;
             }
 
             .twitterQuery > button{
                 border-radius: 5px;
-                border: 3px black solid;
+                /* border: 3px black solid; */
+                margin: 10px;
+                background-color: black;
+                color: white;
             }
     
         main > .resultModal{
-            border: 10px black solid;
-            background-color: black;
+            /* border: 10px black solid; */
+            /* background-color: black; */
         }
 
             .hide-me{
@@ -54,44 +65,56 @@
             }
 
             .threat-green{
-                border: 10px solid green;
+                border: 15px solid green;
+                border-radius: 10px;
             }
             .threat-yellow{
-                border: 10px solid yellow;
+                border: 15px solid rgb(222, 222, 77);
+                border-radius: 10px;
             }
             .threat-orange{
-                border: 10px solid orange;
+                border: 15px solid orange;
+                border-radius: 10px;
             }
             .threat-red{
-                border: 10px solid red;
+                border: 15px solid red;
+                border-radius: 10px;
             }
 
             .resultModal > h2{
                 text-align: center;
-                font-size: 2em;
-                color: white;
-                background-color: black;
+                font-size: 30px;
+                border-bottom: 10px solid black;
+                line-height: normal;
+                /* color: white; */
+                /* background-color: black; */
+            }
+            
+            .resultModal > div{
+                padding: 10px;
             }
 
             .resultModal > div > p:first-child{
                 text-align: center;
-                font-size: 3em;
-                color: white;
-                background-color: black;
+                font-size: 50px;
+                /* color: white; */
+                /* background-color: black; */
             }
 
             .resultModal > div > p:last-child{
                 text-align: center;
                 font-size: 1.4em;
                 line-height: 2em;
-                color: white;
-                background-color: black;
+                /* color: white; */
+                /* background-color: black; */
             }
 
     
         main > .infoButtons{
-            border: 3px black solid;
-            background-color: black
+            /* border: 3px black solid; */
+            /* background-color: black */
+            /* margin-top: 10px; */
+            padding: 5px;
         }
 
             .infoButtons > button{
@@ -99,8 +122,143 @@
                 width: 200px;
                 border-radius: 5px;
                 margin: auto 30px;
-                
-                
+                background-color: black;
+                color: white;
+            }
+    
+    
+    footer{
+
+    }
+}
+
+
+@media (max-width: 767px){
+
+    body{
+        
+    }
+
+    img{
+        width: 100%;
+    }
+
+    .page-container{
+
+    }
+    
+    header{
+
+    }
+    
+    main{
+
+    }
+    
+        main > article{
+            /* border: 3px black solid; */
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            font-size: 1em;
+            
+
+        }
+        
+        main > .twitterQuery{
+            /* border: 3px black solid; */
+            font-size: 30px;
+            /* background-color: black; */
+            /* color: white */
+        }
+            .twitterQuery > div{
+                padding: 10px;
+            }
+
+            .twitterQuery > div > input{
+                background-color: lightgray;
+                border-radius: 10px;
+                font-size: 20px;
+                padding: 5px;
+            }
+
+            .twitterQuery > button{
+                border-radius: 5px;
+                /* border: 3px black solid; */
+                margin: 10px;
+                background-color: black;
+                color: white;
+            }
+    
+        main > .resultModal{
+            /* border: 10px black solid; */
+            /* background-color: black; */
+        }
+
+            .hide-me{
+                visibility: hidden;
+            }
+
+            .threat-green{
+                border: 15px solid green;
+                border-radius: 10px;
+            }
+            .threat-yellow{
+                border: 15px solid yellow;
+                border-radius: 10px;
+            }
+            .threat-orange{
+                border: 15px solid orange;
+                border-radius: 10px;
+            }
+            .threat-red{
+                border: 15px solid red;
+                border-radius: 10px;
+            }
+
+            .resultModal > h2{
+                text-align: center;
+                font-size: 30px;
+                border-bottom: 10px solid black;
+                line-height: normal;
+                /* color: white; */
+                /* background-color: black; */
+            }
+            
+            .resultModal > div{
+                padding: 10px;
+            }
+
+            .resultModal > div > p:first-child{
+                text-align: center;
+                font-size: 3em;
+                /* color: white; */
+                /* background-color: black; */
+            }
+
+            .resultModal > div > p:last-child{
+                text-align: center;
+                font-size: 1.4em;
+                line-height: 2em;
+                /* color: white; */
+                /* background-color: black; */
+            }
+
+    
+        main > .infoButtons{
+            /* border: 3px black solid; */
+            /* background-color: black */
+            /* margin-top: 10px; */
+            padding: 5px;
+        }
+
+            .infoButtons > button{
+                height: 40px;
+                width: 200px;
+                border-radius: 5px;
+                margin: auto 30px;
+                background-color: black;
+                color: white;
             }
     
     

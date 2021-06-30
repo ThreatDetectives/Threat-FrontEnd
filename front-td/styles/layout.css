@@ -20,13 +20,15 @@
         margin: 20px auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 2fr 3fr 3fr 1fr;
+        grid-template-rows: 1fr 3fr 3fr 1fr;
         grid-row-gap: 10px;
     }
     
         main > article{
             grid-column: 1/2;
             grid-row: 1/2;
+            width: 95%;
+            margin: auto;
         }
         
         main > .twitterQuery{
@@ -98,34 +100,87 @@
     }
 }
 
-
 @media (max-width: 767px){
 
     
     .page-container{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 150px 1fr;
+        grid-template-rows: 120px min-content;
+        
     }
     
     header{
         grid-column: 1/2;
         grid-row: 1/2;
     }
+
+    header > div{
+        width: 100%;
+        height: 120px;
+    }
+
+    header > div > div:first-child{
+        width: 100%;
+        height: 30px;
+        background-color: #9a0002;
+
+    }
+    header > div > div:nth-child(2){
+        width: 100%;
+        height: 90px;
+        background-color: white;
+    }
+
+    header > div > div:last-child{
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        text-align: center;
+        padding-top: 20px; 
+    }
+
+    header > div > div:last-child > img:first-child{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+
+    }
+    header > div > div:last-child > img:last-child{
+        width: 120px;
+        height: 70px;
+    }
+    
+    header img{
+        margin: 0px 20px;
+    }
+
+
     
     main{
         grid-column: 1/2;
         grid-row: 2/3;
-        width: 80%;
-        margin: 20px auto;
+        width: 100%;
+        margin: auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 2fr 3fr 3fr 1fr;
+        grid-template-rows: min-content min-content 3fr 1fr;
+        grid-row-gap: 10px;
     }
     
-        main > article{
+        main > section{
             grid-column: 1/2;
             grid-row: 1/2;
+        }
+
+        main > section:first-child > p:first-child{
+            text-align: center;
+            font-size: 20px;
+        }
+
+        main > section:first-child > p:last-child{
+            padding: 10px 45px;
         }
         
         main > .twitterQuery{
@@ -133,26 +188,67 @@
             grid-row: 2/3;
             width: 95%;
             margin: 0px auto;
+            display: grid;
+            grid-template-columns: 65% 35%;
+            grid-template-rows: 1fr;
         }
+
+            .twitterQuery > div{
+                grid-column: 1/2;
+                grid-row: 1/2;
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 50% 50%;
+            }
+
+            .twitterQuery > div > label{
+                grid-column: 1/2;
+                grid-row: 1/2;
+            }
+
+            .twitterQuery > div > input{
+                grid-column: 1/2;
+                grid-row: 2/3;
+            }
+
+            .twitterQuery > button{
+                grid-column: 2/3;
+                grid-row: 1/2;
+            }
+
+
     
         main > .resultModal{
             grid-column: 1/2;
             grid-row: 3/4;
             width: 95%;
             margin: 0px auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 40% 60%;
         }
+
+            .resultModal > div{
+                display: grid;
+                grid-template-columns: 30% 70%;
+                grid-template-rows: 1fr;
+            }
     
         main > .infoButtons{
             grid-column: 1/2;
             grid-row: 4/5;
             width: 95%;
             margin: 0px auto;
+            text-align: center;
         }
+
     
     
     footer{
+        width: 100%;
         position: fixed;
         bottom: 0;
+        z-index: -1;
     }
 }
 

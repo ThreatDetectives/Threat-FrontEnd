@@ -50,7 +50,10 @@ export class Main extends Component {
 	render() {
 		return (
 			<main>
-				<article> About the app and stuff...</article>
+				<section>
+					<p>We bring light to threatening speech.</p>
+					<p>How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...</p>
+				</section>
 
 				<TwitterQuery
 					displayThreat = { this.displayThreatLevel }

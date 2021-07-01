@@ -3,7 +3,10 @@ import React from 'react';
 export default function Footer() {
     return(
         <footer>
-            <img src="https://via.placeholder.com/900x80"></img>
+            <section className="infoButtons">
+                <button>Meet the Devs!</button>
+                <button>Resources!</button>
+            </section>
         </footer>
     );
 }

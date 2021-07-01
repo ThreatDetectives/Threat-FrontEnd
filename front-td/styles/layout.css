@@ -4,7 +4,7 @@
     .page-container{
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: min-content min-content;
+        grid-template-rows: 180px min-content;
         
     }
     
@@ -12,29 +12,96 @@
         grid-column: 1/2;
         grid-row: 1/2;
     }
-    
-    main{
-        grid-column: 1/2;
-        grid-row: 2/3;
-        width: 80%;
-        margin: 20px auto;
+
+    header > div{
+        width: 100%;
+        height: 180px;
+    }
+
+    header > div > div:first-child{
+        width: 100%;
+        height: 40px;
+        background-color: #9a0100;
+
+    }
+    header > div > div:nth-child(2){
+        width: 100%;
+        height: 140px;
+        background-color: white;
+    }
+
+    header > div > div:last-child{
+        width: 500px;
+        position: absolute;
+        top: 0px;
+        left: 35%;
+        padding-top: 20px;
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 3fr 3fr 1fr;
-        grid-row-gap: 10px;
+        grid-template-columns: min-content min-content;
+        grid-template-rows: 1fr;
+        justify-content: center;
+    }
+
+    .header_logo{
+        grid-column: 1/2;
+        grid-row: 1/2;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background-color: #67bac0;
+        margin-top: 10px;
+    }
+
+    .header_logo img{
+        grid-column: 2/3;
+        grid-row: 1/2;
+        width: 90%;
+        margin: 20px 3px;
+    }
+
+    .header_title{
+        width: 260px;
+        margin-top: 26px;
     }
     
-        main > article{
+    /* header img{
+        margin: 0px 20px;
+    } */
+
+
+    
+    main{
+        background-color: white;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: min-content min-content min-content;
+    }
+    
+        main > section{
+            background-color: white;
+            margin: 16px;
             grid-column: 1/2;
             grid-row: 1/2;
-            width: 95%;
-            margin: auto;
+        }
+
+        main > section:first-child > p:first-child{
+            text-align: center;
+            font-size: 20px;
+        }
+
+        main > section:first-child > p:last-child{
+            padding: 10px 45px;
         }
         
         main > .twitterQuery{
+            background-color: white;
             grid-column: 1/2;
             grid-row: 2/3;
-            width: 95%;
+            width: 100%;
             margin: 0px auto;
             display: grid;
             grid-template-columns: 65% 35%;
@@ -69,7 +136,7 @@
         main > .resultModal{
             grid-column: 1/2;
             grid-row: 3/4;
-            width: 95%;
+            width: 100%;
             margin: 0px auto;
             display: grid;
             grid-template-columns: 1fr;
@@ -78,17 +145,10 @@
 
             .resultModal > div{
                 display: grid;
-                grid-template-columns: 30% 70%;
+                grid-template-columns: 1fr;
                 grid-template-rows: 1fr;
             }
     
-        main > .infoButtons{
-            grid-column: 1/2;
-            grid-row: 4/5;
-            width: 95%;
-            margin: 0px auto;
-            text-align: center;
-        }
 
     
     
@@ -96,8 +156,20 @@
         width: 100%;
         position: fixed;
         bottom: 0;
-        z-index: -1;
+        height: 140px;
+        
     }
+
+    .infoButtons{
+        width: 100%;
+        margin: 0px auto;
+        text-align: center;
+        display: inline-block;
+    }
+
+
+
+
 }
 
 @media (max-width: 767px){
@@ -159,17 +231,19 @@
 
     
     main{
+        background-color: white;
         grid-column: 1/2;
         grid-row: 2/3;
         width: 100%;
         margin: auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: min-content min-content 3fr 1fr;
-        grid-row-gap: 10px;
+        grid-template-rows: min-content min-content min-content min-content;
     }
     
         main > section{
+            background-color: white;
+            margin: 0px;
             grid-column: 1/2;
             grid-row: 1/2;
         }
@@ -184,9 +258,10 @@
         }
         
         main > .twitterQuery{
+            background-color: white;
             grid-column: 1/2;
             grid-row: 2/3;
-            width: 95%;
+            width: 100%;
             margin: 0px auto;
             display: grid;
             grid-template-columns: 65% 35%;
@@ -221,7 +296,7 @@
         main > .resultModal{
             grid-column: 1/2;
             grid-row: 3/4;
-            width: 95%;
+            width: 100%;
             margin: 0px auto;
             display: grid;
             grid-template-columns: 1fr;
@@ -230,16 +305,22 @@
 
             .resultModal > div{
                 display: grid;
-                grid-template-columns: 30% 70%;
+                grid-template-columns: 1fr;
                 grid-template-rows: 1fr;
             }
     
         main > .infoButtons{
             grid-column: 1/2;
             grid-row: 4/5;
-            width: 95%;
+            width: 100%;
             margin: 0px auto;
             text-align: center;
+            display: inline-block;
+        }
+        
+        main .infoButtons > button{
+            vertical-align: bottom;
+
         }
 
     
@@ -248,7 +329,7 @@
         width: 100%;
         position: fixed;
         bottom: 0;
-        z-index: -1;
+        
     }
 }
 

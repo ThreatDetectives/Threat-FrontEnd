@@ -7,8 +7,10 @@ export default function Header() {
 					<div></div>
 					<div></div>
 					<div>
-						<img src="https://via.placeholder.com/80x80"></img>
-						<img src="https://via.placeholder.com/120x70"></img>
+						<div className="header_logo">
+							<img src="./images/header_hat.png"></img>
+						</div>
+						<img className="header_title"src="./images/header_logo.png"></img>
 					</div>
 				</div>
 			</header>

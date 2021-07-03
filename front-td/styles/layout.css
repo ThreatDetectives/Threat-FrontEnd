@@ -98,9 +98,9 @@
         main > section:first-child > p:last-child{
             padding: 20px;
             font-size: 18px;
-            text-shadow: 2px 2px 2px #99cccc;
+            /* text-shadow: 2px 2px 2px #99cccc; */
             color: #32797f;
-            background-color: #deeeee;
+            background-color: #ccffffca;
             border-radius: 10px;
             width: 60%;
             margin: auto;
@@ -152,9 +152,11 @@
         text-align: center;
         grid-column: 1/2;
         grid-row: 1/2;
-        font-size: 30px;
+        font-size: 28px;
         color: #32797f;
-        padding: 10px;
+        padding: 5px;
+        font-weight: bold;
+        
     }
     h3{
         color:#32797f;
@@ -202,7 +204,14 @@
     }
 
 
-    
+    .threatTitle{
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .hideResult{
+        visibility: hidden;
+    }
 
     
     
@@ -263,7 +272,6 @@
         height: 100vh;
         background-color: #99ccccdb;
         z-index: 4;
-        pointer-events: none;
     }
 
     .popup{
@@ -285,6 +293,7 @@
     }
 
     .popup figcaption {
+        color:#32797f;
         padding: 5px;
         font-size: 30px;
     }
@@ -301,6 +310,7 @@
     .popup ul li img{
         width: 80px;
         height: 80px;
+        
     }
 
     .popup p{
@@ -329,6 +339,35 @@
         border:#32797f;
     }
 
+    .popup ol{
+        width: 400px;
+        padding: 10px;
+        margin: 10px 0px;
+        font-size: 1.1em;
+        overflow-y: scroll;
+        height: 240px;
+        text-align: left;
+        border: solid 2px #99cccc;
+        background-color:#ccffffc0;
+        color: #32797f;
+        list-style-type: circle;
+    }
+
+    .popup ol li{
+        text-decoration: none;
+        padding: 3px 0px;
+        margin-left: 20px;
+    }
+    .popup ol li a{
+        text-decoration: none;
+        color:#32797f;
+    }
+
+    .popup ol li a:visited{
+        text-decoration: none;
+        color:#e5bf50;
+    }
+
 
 
 }
@@ -349,6 +388,7 @@ button:hover{
     visibility: hidden;
     height: 0px;
 }
+
 
 @media (max-width: 767px){
 

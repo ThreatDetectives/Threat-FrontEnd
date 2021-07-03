@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import data from './dummyData.json';
+// import data from './dummyData.json';
 
 export class TwitterQuery extends Component {
 
@@ -61,22 +61,23 @@ export class TwitterQuery extends Component {
 
     async apiQuery(query) {
 
-        // let result = "";
+        let result = "";
 
-        // axios.get("https://secret-ocean-49799.herokuapp.com/{end point here}")
-        //     .then(response => {
-        //         result=response.data;
-        //     });
-        // return result;  
+        axios.post("http://127.0.0.1:8000/", {"twitterHandle": "hexx_king"})
+            .then(response => {
+                result=response.data;
+                console.log("Here is the result you are looking for", response.data)
+            });
+        return result;  
         
-        let result = [];
+        // let result = [];
 
-        for(let i = 0;i<data.ThreatReport.length;i++){
-            let item = data.ThreatReport[i];
-            result.push(item);
-        }
+        // for(let i = 0;i<data.ThreatReport.length;i++){
+        //     let item = data.ThreatReport[i];
+        //     result.push(item);
+        // }
         
-        return result;
+        // return result;
     }
 
 

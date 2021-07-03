@@ -84,6 +84,7 @@ export class ResultModal extends Component {
 
 
     render() {
+        
         return (
             <section>
                 <h3>{ this.props.title }</h3>

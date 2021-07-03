@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import data from './dummyData.json';
 
 export class TwitterQuery extends Component {
 
@@ -15,31 +17,59 @@ export class TwitterQuery extends Component {
         });
     }
 
-    handleSubmission() {
+    async handleSubmission() {
         if(this.state.query !== '')
-            this.fakeQuery(this.state.query);
+            await this.queryThreat(this.state.query);
     }
 
-    fakeQuery(query) {
-        // const result = Math.floor((Math.random() * (100 -1) + 1));
-        // this.props.displayThreat(result);
-        // this.props.timerToggle();
-        this.setState({
-            query: ''
-        });
 
-        let tempTitle=["","","","",""];
-        let tempThreat=[0,0,0,0,0];
+    async queryThreat(query) {
 
-        for(let i = 0;i<5;i++){
-            tempTitle[i]="title"+i;
-            tempThreat[i]=(i+1)*17;
-            this.props.displayThreat(tempThreat[i]+1,i);
-            this.props.displayTitle(tempTitle[i],i);
-            this.props.timerToggle(i);
+        let result = await this.apiQuery(query);
+        await this.parseData(result);
+    }
+
+    async parseData(result) {
+
+        let index = 0;
+
+        for(let i = 0;i<result.length;i+=2){
+            let value = await this.formatInteger(result[i+1]);
+
+            this.props.displayThreat(value,index);
+            this.props.displayTitle(result[i],index);
+            index++;
         }
 
     }
+
+    async formatInteger(input) {
+
+        const value = input.replace("%","");
+        return parseInt(value);
+    }
+
+    async apiQuery(query) {
+
+        // let result = "";
+
+        // axios.get("https://secret-ocean-49799.herokuapp.com/{end point here}")
+        //     .then(response => {
+        //         result=response.data;
+        //     });
+        // return result;  
+        
+        let result = [];
+
+        for(let i = 0;i<data.ThreatReport.length;i++){
+            let item = data.ThreatReport[i];
+            result.push(item);
+        }
+        
+        return result;
+    }
+
+
 
     render() {
         return (

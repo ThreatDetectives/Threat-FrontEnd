@@ -45,6 +45,10 @@
                 height: 40px;
             }
 
+            input:focus{
+                outline-color: #e5c050d2;
+            }
+
             ::placeholder{
                 color: #32797f;
             }
@@ -58,12 +62,15 @@
             }
 
             .twitterQuery > button{
+                width: 90%;
                 border-radius: 5px;
-                margin: 10px;
+                margin: 10px auto;
                 /* background-color: #99cccc; */
                 color: white;
                 font-size: 40px;
-                border: none;
+                text-shadow: 2px 2px 2px #32797f;
+                border: solid 2px #32797f63;
+                border-top: 1px solid #32797f63;
                 background: linear-gradient(to bottom, #ccffff 20%, #32797f);
             }
     

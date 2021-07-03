@@ -17,33 +17,43 @@ export class TwitterQuery extends Component {
         });
     }
 
-    async handleSubmission() {
+    handleSubmission() {
         if(this.state.query !== '')
-            await this.queryThreat(this.state.query);
+            this.queryThreat(this.state.query);
+    }
+
+    pressEnter(event) {
+        if(event.key==="Enter"){
+            if(this.state.query !== '')
+                this.queryThreat(this.state.query);
+        }
     }
 
 
     async queryThreat(query) {
 
         let result = await this.apiQuery(query);
-        await this.parseData(result);
+        this.parseData(result);
+        this.props.displayQuery(query);
+        this.setState({query:""});
     }
 
-    async parseData(result) {
+    parseData(result) {
 
         let index = 0;
 
         for(let i = 0;i<result.length;i+=2){
-            let value = await this.formatInteger(result[i+1]);
+            let value = this.formatInteger(result[i+1]);
 
-            this.props.displayThreat(value,index);
+            this.props.displayThreat(value+1,index);
             this.props.displayTitle(result[i],index);
+            this.props.timerToggle(index);
             index++;
         }
 
     }
 
-    async formatInteger(input) {
+    formatInteger(input) {
 
         const value = input.replace("%","");
         return parseInt(value);
@@ -76,7 +86,7 @@ export class TwitterQuery extends Component {
             <div className="twitterQuery">
                 <div>
                     <label>Enter Twitter Handle</label>
-                    <input type="text" value={this.state.query} onChange={this.handleInput.bind(this)} placeholder="   Twitter Handle" required/>
+                    <input onKeyPress={this.pressEnter.bind(this)} type="text" value={this.state.query} onChange={this.handleInput.bind(this)} placeholder="   Twitter Handle" required/>
                 </div>
                     <button onClick={this.handleSubmission.bind(this)}>Submit</button>
             </div>

@@ -87,7 +87,7 @@ export class ResultModal extends Component {
         
         return (
             <section>
-                <h3>{ this.props.title }</h3>
+                <h3 className="threatTitle">{ this.props.title }</h3>
             <section className="circle-prog-widget">
                 <div id="circle-container" className={this.state.outerColor}>
                     <div className={this.state.bar}>

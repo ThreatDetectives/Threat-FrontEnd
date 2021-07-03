@@ -7,7 +7,8 @@ export class Main extends Component {
 	state = {
 		threatLevel: [],
 		timerToggle: [false,false,false,false,false],
-		title: ["","","","",""]
+		title: ["","","","",""],
+		query: ""
 	}
 	
 
@@ -36,6 +37,12 @@ export class Main extends Component {
 		})
 	}
 
+	displayQuery = (query) => {
+		this.setState({ 
+			query: query
+		});
+	}
+
 
 
 	render() {
@@ -44,17 +51,23 @@ export class Main extends Component {
 			<main>
 				<section>
 					<p>We bring light to threatening speech.</p>
-					<p>How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...</p>
+					<p>
+						The inspiration for this project came after the January 6th Capitol Riot. We wanted to create a tool that would look for similar threats.
+						<br></br>
+						<br></br>
+						Here you can enter in a Twitter Handle to receive the percentages on how threatenting or neutual any given user might be. 
+					</p>
 				</section>
 
 				<TwitterQuery
 					displayThreat = { this.displayThreatLevel }
 					timerToggle = { this.timerToggle }
 					displayTitle = { this.displayTitle }
+					displayQuery = { this.displayQuery }
 				/>
 				{/* "Threatening", "Conspiracy Theory", "Hate Speech", "Profanity" and "Neutral Language" */}
 				<div id="theResults">
-					<h2>Search results for {}</h2>
+					<h2>Search results for { this.state.query }</h2>
 					<div className="resultsContainer">
 						<ResultModal
 							id = { 0 }

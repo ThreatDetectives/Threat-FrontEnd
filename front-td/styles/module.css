@@ -1,28 +1,4 @@
-@media (min-width: 768px){
 
-
-    body{
-    
-    }
-
-    /* img{
-        width: 100%;
-    } */
-
-    .page-container{
-
-    }
-    
-    header{
-
-    }
-    
-    main{
-
-    }
-    
-        
-        
         main > .twitterQuery{
             font-size: 30px;
         }
@@ -31,9 +7,10 @@
             }
 
             .twitterQuery label{
-                font-size: 26px;
+                font-size: 80%;
                 padding-left: 10px;
                 color: #336666;
+                padding-bottom: 10px;
             }
 
             .twitterQuery > div > input{
@@ -67,7 +44,7 @@
                 margin: 10px auto;
                 /* background-color: #99cccc; */
                 color: white;
-                font-size: 40px;
+                font-size: 90%;
                 text-shadow: 2px 2px 2px #32797f;
                 border: solid 2px #32797f63;
                 border-top: 1px solid #32797f63;
@@ -81,7 +58,7 @@
         background-color: #e5bf50;
     }
 
-    .infoButtons > button{
+    .infoButtons .resources{
         border: none;
         height: 100px;
         width: 100px;
@@ -96,100 +73,21 @@
     button:hover{
         /* background-color:#ccffff;         */
     }
-}
+
 
 
 @media (max-width: 767px){
 
-    
-    body{
-    
-    }
-
-    img{
-        width: 100%;
-    }
-
-    .page-container{
-
-    }
-    
-    header{
-
-    }
-    
-    main{
-
-    }
-    
-        main > article{
-            
-            background-color: white;
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 1em;
-            
-
-        }
-        
-        main > .twitterQuery{
-            font-size: 30px;
-        }
-            .twitterQuery > div{
-                padding: 16px;
-            }
-
-            .twitterQuery label{
-                font-size: 26px;
-                padding-left: 10px;
-                color: #336666;
-            }
-
-            .twitterQuery > div > input{
-                background-color: #ccffff;
-                border-radius: 10px;
-                font-size: 20px;
-                padding: 5px;
-                border: none;
-                height: 40px;
-            }
-
-            ::placeholder{
-                color: #32797f;
-            }
-
-            :-ms-input-placeholder{
-                color: #32797f;
-            }
-
-            ::-ms-input-placeholder{
-                color: #32797f;
-            }
-
-            .twitterQuery > button{
-                border-radius: 5px;
-                margin: 10px;
-                background-color: #99cccc;
-                color: white;
-                font-size: 40px;
-                border: none;
-            }
-    
-
-    
-    
-    footer{
-        background-color: #e5bf50;
-    }
-
-    .infoButtons > button{
+    .infoButtons .resources{
         border: none;
-        height: 100px;
-        width: 100px;
-        border-radius: 50%;
-        color: white;
-        margin: 10px 20px;
+        height: 40px;
+        width: 200px;
+        border-radius: 10px;
+        color: #ccffff;
         background-color: #32797f;
         vertical-align: top;
+        font-size: 1.4em;
+        margin: 10px auto;
+        
     }
 }

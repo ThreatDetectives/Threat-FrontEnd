@@ -74,6 +74,11 @@ export class AboutDevs extends Component {
                         </li>
                     
                     </ul>
+                    <ul className="resourcesUL">
+                        <li>
+                            <button className="resources" onClick={this.toggleResources.bind(this)}>Resources!</button>
+                        </li>
+                    </ul>
                     <div className={this.state.fade?"":"hideme"} id="fade"></div>
                     
                     <section className={this.state.hexx?"popup":"hideme popup"} id="hexx">
@@ -186,7 +191,7 @@ export class AboutDevs extends Component {
         
                     </section>
     
-                    <button className="resources" onClick={this.toggleResources.bind(this)}>Resources!</button>
+                    {/* <button className="resources" onClick={this.toggleResources.bind(this)}>Resources!</button> */}
 
                     <section className={this.state.resources?"popup":"hideme popup"} id="resourcePopup">
 

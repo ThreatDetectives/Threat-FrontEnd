@@ -5,71 +5,109 @@ import TwitterQuery from './twitterQuery';
 export class Main extends Component {
 
 	state = {
-		threatLevel: null,
-		threatColor: '',
-		searchQuery: '',
-		showModal: false,
+		threatLevel: [],
+		timerToggle: [false,false,false,false,false],
+		title: ["","","","",""]
 	}
 	
-	displaySearchQuery = (query) => {
-		this.setState({
-			searchQuery: query
-		});
-	}
-
-	displayModal = () => {
-		this.setState({
-			showModal: true
-		});
-	}
 
 
-	displayThreatLevel = (percentage) => {
+	displayTitle = (title,i) => {
+		let tempTitle=this.state.title;
+		tempTitle[i]=title;
 		this.setState({ 
-			threatLevel: percentage
+			title:tempTitle
+		});
+	}
+	
+	displayThreatLevel = (percentage,i) => {
+		let tempThreat=this.state.threatLevel;
+		tempThreat[i]=percentage;
+		this.setState({ 
+			threatLevel:tempThreat
 		});
 	}
 
-	displayThreatColor = (threat) => {
-		let color;
-		if (threat >= 0 && threat < 25)
-			color = 'threat-green';
-		else if (threat > 24 && threat < 50)
-			color = 'threat-yellow';
-		else if (threat > 49 && threat < 75)
-			color = 'threat-orange';
-		else if (threat > 74)
-			color = 'threat-red';
-		
+	timerToggle = (i) => {
+		let tempTimer=this.state.timerToggle;
+		tempTimer[i]=this.state.timerToggle[i]?false : true;
 		this.setState({
-			threatColor: color
-		});
+			timerToggle:tempTimer
+		})
 	}
+
 
 
 	render() {
+		
 		return (
 			<main>
-				<article> About the app and stuff...</article>
+				<section>
+					<p>We bring light to threatening speech.</p>
+					<p>How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...How to use me...</p>
+				</section>
 
 				<TwitterQuery
 					displayThreat = { this.displayThreatLevel }
-					displayColor = { this.displayThreatColor }
-					displayQuery = { this.displaySearchQuery }
-					displayModal = { this.displayModal }
+					timerToggle = { this.timerToggle }
+					displayTitle = { this.displayTitle }
 				/>
+				{/* "Threatening", "Conspiracy Theory", "Hate Speech", "Profanity" and "Neutral Language" */}
+				<div id="theResults">
+					<h2>Search results for {}</h2>
+					<div className="resultsContainer">
+						<ResultModal
+							id = { 0 }
+							title = { this.state.title[0] }
+							threat = { this.state.threatLevel[0] }
+							displayThreat = { this.displayThreatLevel }
+							displayTitle = { this.displayTitle }
+							timerToggle = { this.state.timerToggle[0] }
+							stopAnimate = { this.timerToggle }
+						/>
 
-				<ResultModal
-					showMe = { this.state.showModal }
-					threat = { this.state.threatLevel }
-					color = { this.state.threatColor }
-					query = { this.state.searchQuery }
-				/>
+						<ResultModal
+							id = { 1 }
+							title = { this.state.title[1] }
+							threat = { this.state.threatLevel[1] }
+							displayThreat = { this.displayThreatLevel }
+							displayTitle = { this.displayTitle }
+							timerToggle = { this.state.timerToggle[1] }
+							stopAnimate = { this.timerToggle }
+						/>
 
-				<section className="infoButtons">
-					<button>Meet the Devs!</button>
-					<button>Resources!</button>
-				</section>
+						<ResultModal
+							id = { 2 }
+							title = { this.state.title[2] }
+							threat = { this.state.threatLevel[2] }
+							displayThreat = { this.displayThreatLevel }
+							displayTitle = { this.displayTitle }
+							timerToggle = { this.state.timerToggle[2] }
+							stopAnimate = { this.timerToggle }
+						/>
+
+						<ResultModal
+							id = { 3 }
+							title = { this.state.title[3] }
+							threat = { this.state.threatLevel[3] }
+							displayThreat = { this.displayThreatLevel }
+							displayTitle = { this.displayTitle }
+							timerToggle = { this.state.timerToggle[3] }
+							stopAnimate = { this.timerToggle }
+						/>
+
+						<ResultModal
+							id = { 4 }
+							title = { this.state.title[4] }
+							threat = { this.state.threatLevel[4] }
+							displayThreat = { this.displayThreatLevel }
+							displayTitle = { this.displayTitle }
+							timerToggle = { this.state.timerToggle[4] }
+							stopAnimate = { this.timerToggle }
+						/>
+					</div>
+				</div>
+
 
 			</main>
 		)

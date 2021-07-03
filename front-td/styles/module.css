@@ -1,7 +1,102 @@
 @media (min-width: 768px){
 
+
     body{
+    
+    }
+
+    /* img{
+        width: 100%;
+    } */
+
+    .page-container{
+
+    }
+    
+    header{
+
+    }
+    
+    main{
+
+    }
+    
         
+        
+        main > .twitterQuery{
+            font-size: 30px;
+        }
+            .twitterQuery > div{
+                padding: 16px;
+            }
+
+            .twitterQuery label{
+                font-size: 26px;
+                padding-left: 10px;
+                color: #336666;
+            }
+
+            .twitterQuery > div > input{
+                background-color: #ccffff;
+                border-radius: 10px;
+                font-size: 20px;
+                padding: 5px;
+                border: none;
+                height: 40px;
+            }
+
+            ::placeholder{
+                color: #32797f;
+            }
+
+            :-ms-input-placeholder{
+                color: #32797f;
+            }
+
+            ::-ms-input-placeholder{
+                color: #32797f;
+            }
+
+            .twitterQuery > button{
+                border-radius: 5px;
+                margin: 10px;
+                /* background-color: #99cccc; */
+                color: white;
+                font-size: 40px;
+                border: none;
+                background: linear-gradient(to bottom, #ccffff 20%, #32797f);
+            }
+    
+
+    
+    
+    footer{
+        background-color: #e5bf50;
+    }
+
+    .infoButtons > button{
+        border: none;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        color: #ccffff;
+        background-color: #32797f;
+        vertical-align: top;
+        font-size: 16px;
+        
+    }
+    
+    button:hover{
+        /* background-color:#ccffff;         */
+    }
+}
+
+
+@media (max-width: 767px){
+
+    
+    body{
+    
     }
 
     img{
@@ -21,7 +116,7 @@
     }
     
         main > article{
-            /* border: 3px black solid; */
+            
             background-color: white;
             border-radius: 10px;
             padding: 10px;
@@ -31,80 +126,63 @@
         }
         
         main > .twitterQuery{
-            border: 3px black solid;
-            background-color: black;
-            color: white
+            font-size: 30px;
         }
             .twitterQuery > div{
+                padding: 16px;
+            }
+
+            .twitterQuery label{
+                font-size: 26px;
+                padding-left: 10px;
+                color: #336666;
+            }
+
+            .twitterQuery > div > input{
+                background-color: #ccffff;
+                border-radius: 10px;
+                font-size: 20px;
                 padding: 5px;
+                border: none;
+                height: 40px;
+            }
+
+            ::placeholder{
+                color: #32797f;
+            }
+
+            :-ms-input-placeholder{
+                color: #32797f;
+            }
+
+            ::-ms-input-placeholder{
+                color: #32797f;
             }
 
             .twitterQuery > button{
                 border-radius: 5px;
-                border: 3px black solid;
+                margin: 10px;
+                background-color: #99cccc;
+                color: white;
+                font-size: 40px;
+                border: none;
             }
     
-        main > .resultModal{
-            border: 10px black solid;
-            background-color: black;
-        }
 
-            .hide-me{
-                visibility: hidden;
-            }
-
-            .threat-green{
-                border: 10px solid green;
-            }
-            .threat-yellow{
-                border: 10px solid yellow;
-            }
-            .threat-orange{
-                border: 10px solid orange;
-            }
-            .threat-red{
-                border: 10px solid red;
-            }
-
-            .resultModal > h2{
-                text-align: center;
-                font-size: 2em;
-                color: white;
-                background-color: black;
-            }
-
-            .resultModal > div > p:first-child{
-                text-align: center;
-                font-size: 3em;
-                color: white;
-                background-color: black;
-            }
-
-            .resultModal > div > p:last-child{
-                text-align: center;
-                font-size: 1.4em;
-                line-height: 2em;
-                color: white;
-                background-color: black;
-            }
-
-    
-        main > .infoButtons{
-            border: 3px black solid;
-            background-color: black
-        }
-
-            .infoButtons > button{
-                height: 40px;
-                width: 200px;
-                border-radius: 5px;
-                margin: auto 30px;
-                
-                
-            }
     
     
     footer{
+        background-color: #e5bf50;
+    }
 
+    .infoButtons > button{
+        border: none;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        color: white;
+        margin: 10px 20px;
+        background-color: #32797f;
+        vertical-align: top;
     }
 }

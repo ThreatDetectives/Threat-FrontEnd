@@ -1,9 +1,10 @@
 import React from 'react';
+import AboutDevs from './aboutDevs';
 
 export default function Footer() {
     return(
         <footer>
-            <img src="https://via.placeholder.com/900x80"></img>
+            <AboutDevs />
         </footer>
     );
 }

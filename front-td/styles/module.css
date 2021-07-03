@@ -5,6 +5,100 @@
     
     }
 
+    /* img{
+        width: 100%;
+    } */
+
+    .page-container{
+
+    }
+    
+    header{
+
+    }
+    
+    main{
+
+    }
+    
+        
+        
+        main > .twitterQuery{
+            font-size: 30px;
+        }
+            .twitterQuery > div{
+                padding: 16px;
+            }
+
+            .twitterQuery label{
+                font-size: 26px;
+                padding-left: 10px;
+                color: #336666;
+            }
+
+            .twitterQuery > div > input{
+                background-color: #ccffff;
+                border-radius: 10px;
+                font-size: 20px;
+                padding: 5px;
+                border: none;
+                height: 40px;
+            }
+
+            ::placeholder{
+                color: #32797f;
+            }
+
+            :-ms-input-placeholder{
+                color: #32797f;
+            }
+
+            ::-ms-input-placeholder{
+                color: #32797f;
+            }
+
+            .twitterQuery > button{
+                border-radius: 5px;
+                margin: 10px;
+                /* background-color: #99cccc; */
+                color: white;
+                font-size: 40px;
+                border: none;
+                background: linear-gradient(to bottom, #ccffff 20%, #32797f);
+            }
+    
+
+    
+    
+    footer{
+        background-color: #e5bf50;
+    }
+
+    .infoButtons > button{
+        border: none;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        color: #ccffff;
+        background-color: #32797f;
+        vertical-align: top;
+        font-size: 16px;
+        
+    }
+    
+    button:hover{
+        /* background-color:#ccffff;         */
+    }
+}
+
+
+@media (max-width: 767px){
+
+    
+    body{
+    
+    }
+
     img{
         width: 100%;
     }
@@ -45,12 +139,24 @@
             }
 
             .twitterQuery > div > input{
-                background-color: lightgray;
+                background-color: #ccffff;
                 border-radius: 10px;
                 font-size: 20px;
                 padding: 5px;
                 border: none;
                 height: 40px;
+            }
+
+            ::placeholder{
+                color: #32797f;
+            }
+
+            :-ms-input-placeholder{
+                color: #32797f;
+            }
+
+            ::-ms-input-placeholder{
+                color: #32797f;
             }
 
             .twitterQuery > button{
@@ -62,48 +168,11 @@
                 border: none;
             }
     
-        main > .resultModal{
-            background-color: #e5bf50;
-        }
 
-            .hide-me{
-                visibility: hidden;
-            }
-
-            .threat-green{
-                border: 15px solid green;
-                border-radius: 10px;
-            }
-            .threat-yellow{
-                border: 15px solid yellow;
-                border-radius: 10px;
-            }
-            .threat-orange{
-                border: 15px solid orange;
-                border-radius: 10px;
-            }
-            .threat-red{
-                border: 15px solid red;
-                border-radius: 10px;
-            }
-
-            .resultModal > h2{
-                text-align: center;
-                font-size: 30px;
-            }
-            
-            .resultModal > div{
-                padding: 10px;
-            }
-
-            .resultModal > div > p:first-child{
-                text-align: center;
-                font-size: 20px;
-            }
     
     
     footer{
-        background-color: rgb(163, 203, 206);
+        background-color: #e5bf50;
     }
 
     .infoButtons > button{
@@ -115,127 +184,5 @@
         margin: 10px 20px;
         background-color: #32797f;
         vertical-align: top;
-    }
-}
-
-
-@media (max-width: 767px){
-
-    body{
-    
-    }
-
-    img{
-        width: 100%;
-    }
-
-    .page-container{
-
-    }
-    
-    header{
-
-    }
-    
-    main{
-
-    }
-    
-        main > article{
-            
-            background-color: white;
-            border-radius: 10px;
-            padding: 10px;
-            font-size: 1em;
-            
-
-        }
-        
-        main > .twitterQuery{
-            font-size: 30px;
-        }
-            .twitterQuery > div{
-                padding: 16px;
-            }
-
-            .twitterQuery label{
-                font-size: 26px;
-            }
-
-            .twitterQuery > div > input{
-                background-color: lightgray;
-                border-radius: 10px;
-                font-size: 20px;
-                padding: 5px;
-            }
-
-            .twitterQuery > button{
-                border-radius: 5px;
-                margin: 10px;
-                background-color: rgb(163, 203, 206);
-                color: white;
-            }
-    
-        main > .resultModal{
-            background-color: rgb(220, 197, 104);
-        }
-
-            .hide-me{
-                visibility: hidden;
-            }
-
-            .threat-green{
-                border: 15px solid green;
-                border-radius: 10px;
-            }
-            .threat-yellow{
-                border: 15px solid yellow;
-                border-radius: 10px;
-            }
-            .threat-orange{
-                border: 15px solid orange;
-                border-radius: 10px;
-            }
-            .threat-red{
-                border: 15px solid red;
-                border-radius: 10px;
-            }
-
-            .resultModal > h2{
-                text-align: center;
-                font-size: 30px;
-            }
-            
-            .resultModal > div{
-                padding: 10px;
-            }
-
-            .resultModal > div > p:first-child{
-                text-align: center;
-                font-size: 20px;
-            }
-
-            
-
-    
-        main > .infoButtons{
-            background-color: rgb(65, 117, 126);
-            padding: 10px;
-        }
-
-            .infoButtons > button{
-                border: none;
-                height: 80px;
-                width: 80px;
-                border-radius: 50%;
-                color: white;
-                margin: 0px 20px;
-                background-color: rgb(163, 203, 206)
-            }
-    
-    
-    footer{
-        background-color: rgb(163, 203, 206);
-        height: 60px;
     }
 }

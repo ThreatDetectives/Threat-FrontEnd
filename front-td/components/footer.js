@@ -1,12 +1,10 @@
 import React from 'react';
+import AboutDevs from './aboutDevs';
 
 export default function Footer() {
     return(
         <footer>
-            <section className="infoButtons">
-                <button>Meet the Devs!</button>
-                <button>Resources!</button>
-            </section>
+            <AboutDevs />
         </footer>
     );
 }

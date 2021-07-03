@@ -58,6 +58,21 @@ export class Main extends Component {
 
 	render() {
 		
+		let results = [];
+		for(let i=0;i<this.state.threatLevel.length;i++){
+			results.push({
+				key:i,
+				id:i,
+				title:this.state.title[i],
+				threat:this.state.threatLevel[i],
+				timerToggle:this.state.timerToggle[i],
+				displayThreat:this.displayThreatLevel,
+				displayTitle:this.displayTitle,
+				stopAnimate:this.timerToggle
+
+			});
+		}
+
 		return (
 			<main>
 				<section>
@@ -79,57 +94,25 @@ export class Main extends Component {
 				/>
 				{/* "Threatening", "Conspiracy Theory", "Hate Speech", "Profanity" and "Neutral Language" */}
 				<div className={ this.state.toggleResults?"":"hideResult" } id="theResults">
+					
 					<h2>Search results for { this.state.query }</h2>
 					<div className="resultsContainer">
-						<ResultModal
-							id = { 0 }
-							title = { this.state.title[0] }
-							threat = { this.state.threatLevel[0] }
-							displayThreat = { this.displayThreatLevel }
-							displayTitle = { this.displayTitle }
-							timerToggle = { this.state.timerToggle[0] }
-							stopAnimate = { this.timerToggle }
-						/>
+						{
+							results.map((item)=>
+								<ResultModal
+								key={ item.key }
+								id = { item.id }
+								title = { item.title }
+								threat = { item.threat }
+								displayThreat = { item.displayThreat }
+								displayTitle = { item.displayTitle }
+								timerToggle = { item.timerToggle }
+								stopAnimate = { item.stopAnimate }
+								/>
+							)
+						}
 
-						<ResultModal
-							id = { 1 }
-							title = { this.state.title[1] }
-							threat = { this.state.threatLevel[1] }
-							displayThreat = { this.displayThreatLevel }
-							displayTitle = { this.displayTitle }
-							timerToggle = { this.state.timerToggle[1] }
-							stopAnimate = { this.timerToggle }
-						/>
 
-						<ResultModal
-							id = { 2 }
-							title = { this.state.title[2] }
-							threat = { this.state.threatLevel[2] }
-							displayThreat = { this.displayThreatLevel }
-							displayTitle = { this.displayTitle }
-							timerToggle = { this.state.timerToggle[2] }
-							stopAnimate = { this.timerToggle }
-						/>
-
-						<ResultModal
-							id = { 3 }
-							title = { this.state.title[3] }
-							threat = { this.state.threatLevel[3] }
-							displayThreat = { this.displayThreatLevel }
-							displayTitle = { this.displayTitle }
-							timerToggle = { this.state.timerToggle[3] }
-							stopAnimate = { this.timerToggle }
-						/>
-
-						<ResultModal
-							id = { 4 }
-							title = { this.state.title[4] }
-							threat = { this.state.threatLevel[4] }
-							displayThreat = { this.displayThreatLevel }
-							displayTitle = { this.displayTitle }
-							timerToggle = { this.state.timerToggle[4] }
-							stopAnimate = { this.timerToggle }
-						/>
 					</div>
 				</div>
 

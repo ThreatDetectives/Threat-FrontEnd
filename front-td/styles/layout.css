@@ -209,6 +209,10 @@
         font-weight: bold;
     }
 
+    .hideResult{
+        visibility: hidden;
+    }
+
     
     
     footer{
@@ -335,6 +339,35 @@
         border:#32797f;
     }
 
+    .popup ol{
+        width: 400px;
+        padding: 10px;
+        margin: 10px 0px;
+        font-size: 1.1em;
+        overflow-y: scroll;
+        height: 240px;
+        text-align: left;
+        border: solid 2px #99cccc;
+        background-color:#ccffffc0;
+        color: #32797f;
+        list-style-type: circle;
+    }
+
+    .popup ol li{
+        text-decoration: none;
+        padding: 3px 0px;
+        margin-left: 20px;
+    }
+    .popup ol li a{
+        text-decoration: none;
+        color:#32797f;
+    }
+
+    .popup ol li a:visited{
+        text-decoration: none;
+        color:#e5bf50;
+    }
+
 
 
 }
@@ -355,6 +388,7 @@ button:hover{
     visibility: hidden;
     height: 0px;
 }
+
 
 @media (max-width: 767px){
 

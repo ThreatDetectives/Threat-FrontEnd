@@ -8,7 +8,8 @@ export class Main extends Component {
 		threatLevel: [],
 		timerToggle: [false,false,false,false,false],
 		title: ["","","","",""],
-		query: ""
+		query: "",
+		toggleResults: false
 	}
 	
 
@@ -35,6 +36,16 @@ export class Main extends Component {
 		this.setState({
 			timerToggle:tempTimer
 		})
+	}
+
+	toggleResults = () => {
+
+		if(!this.state.toggleResults){
+
+			this.setState({
+				toggleResults:true
+			})
+		}
 	}
 
 	displayQuery = (query) => {
@@ -64,9 +75,10 @@ export class Main extends Component {
 					timerToggle = { this.timerToggle }
 					displayTitle = { this.displayTitle }
 					displayQuery = { this.displayQuery }
+					toggleResults = { this.toggleResults }
 				/>
 				{/* "Threatening", "Conspiracy Theory", "Hate Speech", "Profanity" and "Neutral Language" */}
-				<div id="theResults">
+				<div className={ this.state.toggleResults?"":"hideResult" } id="theResults">
 					<h2>Search results for { this.state.query }</h2>
 					<div className="resultsContainer">
 						<ResultModal

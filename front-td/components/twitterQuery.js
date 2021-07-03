@@ -31,7 +31,7 @@ export class TwitterQuery extends Component {
 
 
     async queryThreat(query) {
-
+        this.props.toggleResults();
         let result = await this.apiQuery(query);
         this.parseData(result);
         this.props.displayQuery(query);

@@ -190,15 +190,22 @@ export class AboutDevs extends Component {
 
                     <section className={this.state.resources?"popup":"hideme popup"} id="resourcePopup">
 
-                    <figure>
-                            <img src="./images/header_logo.png"></img>
-                            <figcaption>Resourses</figcaption>
+                        <figure>
+                            <figcaption>Resources</figcaption>
                         </figure>
                         <ul>
                             <li><img src="./logo512.png"></img></li>
                             <li><a href="https://github.com/ThreatDetectives" target="_blank"><img src="./images/github.png"></img></a></li>
                         </ul>
-                        <p>about me</p>
+                        <ol>
+                            <li><a href="https://github.com/scottfalbo/react-circle-prog-widget" target="_blank">React circle widget by Scott Falbo</a></li>
+                            <li><a href="#" target="_blank">cool resource!!!</a></li>
+                            <li><a href="#" target="_blank">cool resource!!!</a></li>
+                            <li><a href="#" target="_blank">cool resource!!!</a></li>
+                            <li><a href="#" target="_blank">cool resource!!!</a></li>
+                            <li><a href="#" target="_blank">cool resource!!!</a></li>
+                            <li><a href="#" target="_blank">cool resource!!!</a></li>
+                        </ol>
                         <button onClick={this.closePopup.bind(this)}>Close</button>
                                 
     

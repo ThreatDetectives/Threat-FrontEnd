@@ -1,5 +1,6 @@
 {
   "name": "daily-xkcd",
+  "homepage": "https://threat-front-end-4cg21t7cr-threatdetective.vercel.app/",
   "version": "0.1.0",
   "private": true,
   "scripts": {

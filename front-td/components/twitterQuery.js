@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import data from './dummyData.json';
+// import data from './dummyData.json';
 
 export class TwitterQuery extends Component {
 
@@ -32,16 +32,19 @@ export class TwitterQuery extends Component {
 
     async queryThreat(query) {
         this.props.toggleResults();
-        let result = await this.apiQuery(query);
-        this.parseData(result);
-        this.props.displayQuery(query);
-        this.setState({query:""});
+        await this.apiQuery(query);
+        // console.log(result);
+        // this.parseData(result);
+        // this.props.displayQuery(query);
+        // this.setState({query:""});
     }
+    
+ 
 
     parseData(result) {
 
         let index = 0;
-
+        console.log(result);
         for(let i = 0;i<result.length;i+=2){
             let value = this.formatInteger(result[i+1]);
 
@@ -61,22 +64,25 @@ export class TwitterQuery extends Component {
 
     async apiQuery(query) {
 
-        // let result = "";
+        let result;
 
-        // axios.get("https://secret-ocean-49799.herokuapp.com/{end point here}")
-        //     .then(response => {
-        //         result=response.data;
-        //     });
-        // return result;  
+        axios.post("http://127.0.0.1:8000/", {"twitterHandle": "hexx_king"})
+            .then(response => {
+                result=(response.data);
+                this.parseData(result.ThreatReport);
+                this.props.displayQuery(query);
+                this.setState({query:""});
+            });
+        return result;  
         
-        let result = [];
+        // let result = [];
 
-        for(let i = 0;i<data.ThreatReport.length;i++){
-            let item = data.ThreatReport[i];
-            result.push(item);
-        }
+        // for(let i = 0;i<data.ThreatReport.length;i++){
+        //     let item = data.ThreatReport[i];
+        //     result.push(item);
+        // }
         
-        return result;
+        // return result;
     }
 
 

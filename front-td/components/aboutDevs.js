@@ -203,7 +203,7 @@ export class AboutDevs extends Component {
                             <li><a href="https://github.com/ThreatDetectives" target="_blank"><img src="./images/github.png"></img></a></li>
                         </ul>
                         <ol>
-                            <li><a href="https://github.com/scottfalbo/react-circle-prog-widget" target="_blank">React circle widget by Scott Falbo</a></li>
+                            <li><a href="https://github.com/scottfalbo/react-circle-prog-widget" target="_blank">React circle widget </a></li>
                             <li><a href="#" target="_blank">cool resource!!!</a></li>
                             <li><a href="#" target="_blank">cool resource!!!</a></li>
                             <li><a href="#" target="_blank">cool resource!!!</a></li>

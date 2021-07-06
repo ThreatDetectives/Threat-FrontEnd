@@ -32,16 +32,19 @@ export class TwitterQuery extends Component {
 
     async queryThreat(query) {
         this.props.toggleResults();
-        let result = await this.apiQuery(query);
-        this.parseData(result);
-        this.props.displayQuery(query);
-        this.setState({query:""});
+        await this.apiQuery(query);
+        // console.log(result);
+        // this.parseData(result);
+        // this.props.displayQuery(query);
+        // this.setState({query:""});
     }
+    
+ 
 
     parseData(result) {
 
         let index = 0;
-
+        console.log(result);
         for(let i = 0;i<result.length;i+=2){
             let value = this.formatInteger(result[i+1]);
 
@@ -61,12 +64,14 @@ export class TwitterQuery extends Component {
 
     async apiQuery(query) {
 
-        let result = "";
+        let result;
 
         axios.post("http://127.0.0.1:8000/", {"twitterHandle": "hexx_king"})
             .then(response => {
-                result=response.data;
-                console.log("Here is the result you are looking for", response.data)
+                result=(response.data);
+                this.parseData(result.ThreatReport);
+                this.props.displayQuery(query);
+                this.setState({query:""});
             });
         return result;  
         

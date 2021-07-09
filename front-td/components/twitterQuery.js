@@ -66,7 +66,7 @@ export class TwitterQuery extends Component {
 
         let result;
 
-        axios.post("http://127.0.0.1:8000/", {"twitterHandle": "hexx_king"})
+        axios.post("https://threat-detective.herokuapp.com/", {"twitterHandle": query})
             .then(response => {
                 result=(response.data);
                 this.parseData(result.ThreatReport);
